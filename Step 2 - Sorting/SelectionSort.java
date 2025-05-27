@@ -1,6 +1,6 @@
 public class SelectionSort {
 	
-	public static void sort(int[] arr) {
+	public static void sort(int[] arr) { 
 
 		int n = arr.length;
 		for (int i = 0; i < n; i++) {
