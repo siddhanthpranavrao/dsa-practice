@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class Pattern8 {
     
     public static void createPattern(int n) {
