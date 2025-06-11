@@ -1,5 +1,22 @@
 public class SortColors {
 
+
+    public static void sortColorsDutchFlagAlgo(int[] arr) {
+        int n = arr.length;
+        int low = 0; int mid = 0; int high = n-1;
+
+        while (mid <= high) {
+            if (arr[mid] == 0) {
+                swap(arr, mid++, low++);
+            } else if (arr[mid] == 1) {
+                mid++;
+            } else if (arr[mid] == 2) {
+                swap(arr, mid, high);
+                high--;
+            }
+        }
+    }
+
     public static void swap(int[] arr, int p1, int p2) {
         int temp = arr[p1];
         arr[p1] = arr[p2];
@@ -44,7 +61,7 @@ public class SortColors {
     }
     public static void main(String[] args) {
         int[] arr = {1,0,2,1,1};
-        sortColors(arr);
+        sortColorsDutchFlagAlgo(arr);
         for (int a : arr) {
             System.out.println(a);
         }
